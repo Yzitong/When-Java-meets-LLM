@@ -86,8 +86,7 @@
 
 如果你有任何问题、建议或合作意向，欢迎通过以下方式联系我：
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+- GitHub: [@Yuzitong](https://github.com/Yuzitong)
 - Email: yztong@bupt.edu.cn
 
 感谢你的关注和支持！希望这个仓库能帮助你在大模型学习的道路上取得进步。
