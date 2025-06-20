@@ -26,96 +26,44 @@
 - **视觉化呈现**：使用图表、流程图等直观展示复杂概念
 
 ## 📚 目录结构
-├── 01_foundation        # 大模型基础
-│   ├── transformer.md   # Transformer架构详解
-│   ├── attention.md     # 注意力机制原理
-│   └── tokenization.md  # 分词技术
-│
-├── 02_models            # 经典模型
-│   ├── gpt_series.md    # GPT系列发展历程
-│   ├── llama_family.md  # Llama家族模型分析
-│   └── chinese_llm.md   # 中文大模型概览
-│
-├── 03_training          # 模型训练
-│   ├── pretraining.md   # 预训练过程
-│   ├── finetuning.md    # 微调技术
-│   └── optimization.md  # 训练优化方法
-│
-├── 04_evaluation        # 模型评估
-│   ├── metrics.md       # 评估指标
-│   └── benchmark.md     # 基准测试
-│
-├── 05_applications      # 应用实践
-│   ├── prompt_engineering.md  # 提示工程
-│   ├── multimodal.md    # 多模态应用
-│   └── tool_use.md      # 工具使用与Agent
-│
-├── 06_research_papers   # 前沿论文笔记
-│   ├── weekly_reading.md  # 每周论文阅读
-│   └── trend_analysis.md  # 研究趋势分析
-│
-├── projects             # 实践项目
-│   ├── custom_llm       # 自定义小型LLM
-│   ├── llm_agent        # LLM Agent实现
-│   └── application_demo # 应用Demo
-│
-└── resources            # 学习资源
-    ├── courses.md       # 优质课程
-    ├── papers.md        # 必读论文
-    └── tools.md         # 实用工具
-## 📖 精选内容示例
+├── 01_foundation        # 大模型基础  
+│   ├── transformer.md   # Transformer架构详解  
+│   ├── attention.md     # 注意力机制原理  
+│   └── tokenization.md  # 分词技术  
+│  
+├── 02_models            # 经典模型  
+│   ├── gpt_series.md    # GPT系列发展历程  
+│   ├── llama_family.md  # Llama家族模型分析  
+│   └── chinese_llm.md   # 中文大模型概览  
+│  
+├── 03_training          # 模型训练  
+│   ├── pretraining.md   # 预训练过程  
+│   ├── finetuning.md    # 微调技术  
+│   └── optimization.md  # 训练优化方法  
+│  
+├── 04_evaluation        # 模型评估  
+│   ├── metrics.md       # 评估指标  
+│   └── benchmark.md     # 基准测试  
+│  
+├── 05_applications      # 应用实践  
+│   ├── prompt_engineering.md  # 提示工程  
+│   ├── multimodal.md    # 多模态应用  
+│   └── tool_use.md      # 工具使用与Agent  
+│  
+├── 06_research_papers   # 前沿论文笔记  
+│   ├── weekly_reading.md  # 每周论文阅读  
+│   └── trend_analysis.md  # 研究趋势分析  
+│  
+├── projects             # 实践项目  
+│   ├── custom_llm       # 自定义小型LLM  
+│   ├── llm_agent        # LLM Agent实现  
+│   └── application_demo # 应用Demo  
+│  
+└── resources            # 学习资源  
+    ├── courses.md       # 优质课程  
+    ├── papers.md        # 必读论文  
+    └── tools.md         # 实用工具  
 
-### Transformer架构详解
-
-Transformer是现代大语言模型的基础架构，它通过自注意力机制实现了并行计算和长距离依赖建模。下面是Transformer架构的核心组件：
-┌───────────────────────────────────────────────────────────┐
-│                      Encoder-Decoder                        │
-└───────────────────────────────────────────────────────────┘
-                               ↑↓
-┌──────────────────────────────┴──────────────────────────────┐
-│                          Multi-Head Attention                 │
-└──────────────────────────────┬──────────────────────────────┘
-                               ↑↓
-┌──────────────────────────────┴──────────────────────────────┐
-│                          Position-wise FFN                   │
-└──────────────────────────────┬──────────────────────────────┘
-                               ↑↓
-┌──────────────────────────────┴──────────────────────────────┐
-│                      Positional Encoding                      │
-└──────────────────────────────────────────────────────────────┘
-Transformer的关键创新点：
-
-1. **多头注意力机制**：通过多个注意力头并行处理不同子空间的信息
-2. **位置编码**：解决序列位置信息问题
-3. **层归一化**：加速训练并提高稳定性
-4. **残差连接**：缓解深度网络训练困难
-
-### 提示工程实践指南
-
-提示工程是充分发挥大模型能力的关键技术。以下是一些实用的提示设计原则：
-
-1. **明确指令**：使用清晰、具体的语言表达需求
-2. **提供示例**：通过Few-Shot学习引导模型理解任务
-3. **思维链提示**：要求模型展示推理过程，提高复杂任务表现
-4. **角色设定**：赋予模型特定身份，调整输出风格
-5. **结构化输出**：指定输出格式，便于后续处理
-
-**示例：复杂推理任务的思维链提示**
-问题：如果一个正方形的边长增加20%，它的面积会增加多少百分比？
-
-请按照以下步骤思考并回答：
-1. 首先定义原始边长
-2. 计算增加20%后的新边长
-3. 分别计算原始面积和新面积
-4. 计算面积增加的百分比
-5. 给出最终答案
-
-解答：
-1. 假设原始边长为10单位
-2. 增加20%后，新边长为10 + (10×0.2) = 12单位
-3. 原始面积 = 10×10 = 100平方单位，新面积 = 12×12 = 144平方单位
-4. 面积增加量 = 144 - 100 = 44平方单位，增加百分比 = (44/100)×100% = 44%
-5. 所以，面积会增加44%
 ## 🤝 如何参与
 
 1. **贡献笔记**：如果你有关于大模型的学习笔记或见解，欢迎提交PR
