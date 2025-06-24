@@ -17,6 +17,7 @@
   <img src="https://img.shields.io/github/license/yourusername/llm-mastery-journey" alt="License">
 </a>
 
+
 ## 🚀 仓库亮点
 
 - **系统化学习路径**：从基础概念到前沿研究，构建完整知识体系
@@ -24,6 +25,10 @@
 - **持续更新**：追踪大模型领域最新进展，及时补充笔记
 - **社区互动**：欢迎提交PR、讨论问题、分享见解
 - **视觉化呈现**：使用图表、流程图等直观展示复杂概念
+
+> 💡 本项目文档包含 LaTeX 数学公式。  
+> 如需在 GitHub 上直接浏览公式，推荐安装 [GitHub with MathJax 插件](https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima)。  
+> 或点击 [在线版文档（支持公式渲染）](https://hackmd.io/@你的id/你的文档) 进行阅读。
 
 ## 📚 目录结构
 ├── 01_foundation        # 大模型基础  
