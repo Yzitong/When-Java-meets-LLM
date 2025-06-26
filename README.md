@@ -38,7 +38,7 @@
 | [**01-BERT与大模型组件**](01-BERT与大模型组件/) | BERT 基础组件、词向量、位置编码、Transformer 注意力机制、大模型组件拆解   | ✅     |
 | [**02-Pre-training篇**](02-Pre-training/)       | 预训练全流程、数据预处理、预训练任务设计、训练效率优化                   | ✅     |
 | [**03-Post-training篇**](03-Post-training/)     | 大模型对齐（RLHF）、参数高效微调（LoRA/PEFT）、多任务微调                 | ✅     |
-| [**04-应用：RAG与Agent**](04-Applications/)       | RAG 检索增强生成、智能 Agent 设计、多轮对话管理、垂直场景应用             | ✅     |
+| [**04-应用篇：RAG与Agent**](04-Applications/)       | RAG 检索增强生成、智能 Agent 设计、多轮对话管理、垂直场景应用             | ✅     |
 | [**05-开源实践项目**](05-Practice-Projects/) | 通信领域大模型项目（LoRA+RAG）、智能客服 Agent 开发、项目全流程实践       | 🚧     |
 | [**06-前沿大模型技术报告**](06-Frontier-Reports/) | 前沿模型调研（DeepSeek/Qwen/Llama 等）、论文复现（FlashAttention/MoE）   | ✅     |
 | [**07-大厂面经整理**](07-Interview-Prep/)   | 大厂面经整理、核心概念问答、项目经验准备、模拟面试与复盘                 | ✅     |
