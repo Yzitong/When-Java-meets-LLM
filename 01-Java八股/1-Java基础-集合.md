@@ -176,5 +176,38 @@ b）查找和删除的平均复杂度也为O（1）；但当哈希冲突比较�
 
 →追问：HashMap的jdk1.7和jdk1.8有什么区别？1.8之前只有拉链法，1.8后才有红黑树
 
-<img src="C:\Users\于子童\AppData\Roaming\Typora\typora-user-images\image-20250814105325736.png" alt="image-20250814105325736" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250814110706417.png" alt="image-20250814110706417" style="zoom:67%;" />
 
+
+
+### 5.HashMap的put方法的具体流程？（高频）
+
+<img src="https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250814110747794.png" alt="image-20250814110747794" style="zoom: 80%;" />
+
+<img src="https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250814110758520.png" alt="image-20250814110758520" style="zoom: 67%;" />
+
+### 6.讲一讲HashMap的扩容机制
+
+<img src="https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250814110848029.png" alt="image-20250814110848029" style="zoom: 50%;" />
+
+
+
+### 7.hashMap的寻址算法
+
+<img src="https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250814111054085.png" alt="image-20250814111054085" style="zoom:50%;" />
+
+<img src="https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250814111109119.png" alt="image-20250814111109119" style="zoom: 50%;" />
+
+//注：1.从此可知为何hashMap数组的长度选择16，为2的次幂。
+
+​		a）计算索引是用&操作效率更高
+
+​		b）扩容时重新计算索引用&操作效率更高
+
+
+
+### 8.如何避免hashMap在jdk1.7情况下遇到的多线程死循环问题？
+
+jdk1.7的hashMap没有红黑树，只有数组+链表，在数组进行扩容时，因为链表是头插法，在进行数据迁移的过程中，多线程中有可能导致死循环。
+
+![image-20250814111235420](https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250814111235420.png)
