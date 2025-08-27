@@ -6,18 +6,22 @@
 
 JVM 并非独立的 “安装程序”，而是依托于 JRE/JDK 的 “运行环境组件”。
 
+JVM是calss字节码的运行环境。
+
 JVM（Java 虚拟机）是 Java 程序的 “执行引擎”，其运行依赖于操作系统和 JRE（Java 运行时环境），层级关系如下：
 **操作系统（OS）→ JRE/JDK → JVM → Java 字节码（.class 文件）→ Java 程序运行**
 
 - 它是 “介于 JRE 和 Java 程序之间” 的虚拟环境：JRE 提供了 JVM 运行所需的核心类库（如 rt.jar）和配置，JVM 则负责将字节码翻译成操作系统能识别的机器码并执行。
 
+<img src="https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250827151835990.png" alt="image-20250827151835990" style="zoom:33%;" />
+
 ### 2.JVM的体系结构
 
 - **jvm调优：99%都是在方法区和堆，大部分时间调堆。** JNI（java native interface）本地方法接口。
 
-<img src="https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250820171259449.png" alt="image-20250820171259449" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250827152230964.png" alt="image-20250827152230964" style="zoom: 33%;" />
 
-![image-20250820171755255](https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250820171755255.png)
+<img src="https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250820171755255.png" alt="image-20250820171755255" style="zoom: 67%;" />
 
 ### 3.native关键字
 
@@ -26,6 +30,13 @@ JVM（Java 虚拟机）是 Java 程序的 “执行引擎”，其运行依赖�
 - 凡是带了native关键字的方法就会进入本地方法栈；
 - 本地接口的作用是融合不同的编程语言为Java所用，它的初衷是融合C/C++程序，Java在诞生的时候是C/C++横行的时候，想要立足，必须有调用C、C++的程序，于是就在内存中专门开辟了一块区域处理标记为native的代码，它的具体做法是 在 Native Method Stack 中登记native方法，在 ( ExecutionEngine ) 执行引擎执行的时候加载Native Libraies。
 - 目前该方法使用的越来越少了，除非是与硬件有关的应用，比如通过Java程序驱动打印机或者Java系统管理生产设备，在企业级应用中已经比较少见。因为现在的异构领域间通信很发达，比如可以使用Socket通信，也可以使用Web Service等等，不多做介绍！
+
+### 4.栈
+
+栈内存，主管程序的运行，生命周期和线程同步。
+
+线程结束，栈内存也就释放，对于栈来说，不存在垃圾回收的问题。
+**一旦线程结束，栈就Over**
 
 ## 类加载器：
 
