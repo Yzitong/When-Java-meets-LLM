@@ -58,4 +58,4 @@ Agent 像一个 **“多功能接口”**—— 能连接并使用各类工具�
 ![image-20250908153456636](https://raw.githubusercontent.com/Yzitong/When-Java-meets-LLM/main/images/image-20250908153456636.png)
 
 ## Planning
-<img width="2940" height="1838" alt="image" src="https://github.com/user-attachments/assets/90646ddc-d7b0-4033-a439-7beabb62ad18" />
+
