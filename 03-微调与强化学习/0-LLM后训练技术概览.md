@@ -239,5 +239,3 @@ Reinforce 的核心：把“对齐人类偏好”视为一个 **强化学习（R
 
 1. 预训练基础模型 → 指令微调 (Tuning) → RLHF 或 DPO (Reinforce)；
 2. 部署侧使用 CoT + Self‑Consistency + Best‑of‑N + 验证器 等一系列 Scaling 技术来提升可靠性。
-
-如果你后面想针对某一类（例如“如何具体实现 Best-of-N + Self‑Consistency + 验证器 的推理流程”）做更工程化的设计，我可以帮你再画更细的 mermaid 时序图或伪代码示例。
